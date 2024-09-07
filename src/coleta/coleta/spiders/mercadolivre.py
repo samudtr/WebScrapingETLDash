@@ -4,7 +4,7 @@ class MercadolivreSpider(scrapy.Spider):
   name = "mercadolivre"
   allowed_domains = ["lista.mercadolivre.com.br"]
   page_count = 1
-  max_pages = 10
+  max_pages = 20
 
   ## Site que vai fazer o request: fonte original/macro da informação:
   start_urls = ["https://lista.mercadolivre.com.br/carros-usados#D[A:carros%20usados]"]
