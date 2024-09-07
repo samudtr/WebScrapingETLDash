@@ -1,6 +1,10 @@
 import pandas as pd
 import sqlite3
 from datetime import datetime
+from dotenv import load_dotenv
+import os 
+
+
 
 ## Json Data Reading. <dtype = str> garantees that thousands marks for numbers will not be misinterpreted
 df = pd.read_json('C:/Users/samud/Documents/Python_Learning/Scrapping/data/data.jsonl', lines=True, dtype = str) 
@@ -37,6 +41,7 @@ df.to_sql('meli_carros',conn,if_exists = 'replace', index = False)
 ## Close sqlite3 connection
 conn.close()
 
+## AWS RDS Connection: 
 
 
 
