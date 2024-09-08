@@ -1,10 +1,11 @@
 import scrapy
+import time
 
 class MercadolivreSpider(scrapy.Spider):
   name = "mercadolivre"
   allowed_domains = ["lista.mercadolivre.com.br"]
   page_count = 1
-  max_pages = 20
+  max_pages = 100
 
   ## Site que vai fazer o request: fonte original/macro da informação:
   start_urls = ["https://lista.mercadolivre.com.br/carros-usados#D[A:carros%20usados]"]
@@ -30,4 +31,5 @@ class MercadolivreSpider(scrapy.Spider):
       next_page = response.css('li.andes-pagination__button.andes-pagination__button--next a::attr(href)').get()
       if next_page:
        self.page_count = self.page_count + 1
+       time.sleep(2)
        yield scrapy.Request(url=next_page, callback=self.parse)   
