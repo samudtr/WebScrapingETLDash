@@ -5,6 +5,8 @@ import pandas as pd
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 import os 
+import psycopg2
+
 
 
 # Step 1: Load the environment variables from the .env file
