@@ -27,7 +27,6 @@ df = df.drop(columns=['location'])
 ## Control Columns
 df['_source'] = 'meli'
 df['_data_coleta'] = datetime.now().strftime("%d/%m/%Y")
-##
 
 
 ## SQLite Configuration - Local DBMS that does not require client-server connection
@@ -63,7 +62,7 @@ engine = create_engine(DATABASE_URL)
 conn = engine.connect()
 
 
-# Step 4: Write the DataFrame to the PostgreSQL database
+# Step 4: Write the DataFrame to the PostgreSQL database in AWS
 
 df.to_sql('cars', conn, schema=DB_SCHEMA, if_exists='replace', index=False)
 
