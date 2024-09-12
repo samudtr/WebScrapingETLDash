@@ -1,5 +1,7 @@
 # Webscraping + AWS RDS + Dashboard App project
 
+#### Mantainance note, app offline: Figuring out how to connect to AWS without using IPV4 to keep on free tier. -> Maybe go to Render?
+
 This project showcases my skills to build a webscraping robot **(Scrapy)**, transform the data **(Pandas)**, store it on **AWS RDS** **(PostgreSQL)** and deploy a dashboard online using **Streamlit**.
 
 The final product is a dashboard accesible by any browser containing valuable information about used car prices in Brazil. In a business perspective, it can be used as a benchmark for several companies that work into or depend on this market.
