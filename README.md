@@ -9,6 +9,8 @@ The final product is a dashboard accesible by any browser containing valuable in
 
 > [Final app: Open Dashboard for Used Cars Prices in Brazil](https://carscraping.streamlit.app/)
 
+> Pictures at the end of this README
+
 ## Tech Stack
 
 1) I use **venv** for dependencies management.
@@ -30,4 +32,8 @@ The final product is a dashboard accesible by any browser containing valuable in
 
 4) I have built a dashboard app using Streamlit and deployed it to the Streamlit cloud. This step required the AWS RDS setup.
 
-
+## Project Pictures
+![DBeaver Implementation](./images/Datapics2.png) 
+![Raw Jsonl](./images/Datapics.png)  
+![Dash 1](./images/Datapics3.png)  
+![Dash 2](./images/Datapics4.png)  
