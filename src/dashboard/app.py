@@ -80,14 +80,14 @@ avg_year_by_state = df.groupby('state')['year'].mean()
 st.bar_chart(avg_year_by_state)
 
 # Filter by State
-st.subheader("Filtrar por Estado")
-state_filter = st.selectbox("Escolha um Estado", df['state'].unique(), index=0)
+st.subheader("Filter by State")
+state_filter = st.selectbox("State Selection", df['state'].unique(), index=0)
 
 # Filter the data based on selected state
 filtered_df = df[df['state'] == state_filter]
 
 # Line Chart: Average Price of Cars by Year for Selected State
-st.subheader(f"Preço Médio de Carros por Ano no Estado {state_filter}")
+st.subheader(f"Average car price in the State of {state_filter}")
 avg_price_by_year = filtered_df.groupby('year')['price'].mean()
 
 # Plot the line chart using Streamlit
